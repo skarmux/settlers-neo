@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://clwclw6731lo2"]
+
+[ext_resource type="Script" path="res://scripts/stress_test.gd" id="1_s1r8y"]
+[ext_resource type="PackedScene" uid="uid://uycve418t536" path="res://scenes/settler.tscn" id="2_m6bgk"]
+
+[node name="StressTest" type="Node2D"]
+script = ExtResource("1_s1r8y")
+settler_scene = ExtResource("2_m6bgk")
+
+[node name="Settlers" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="FpsCounter" type="Label" parent="."]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "FPS"

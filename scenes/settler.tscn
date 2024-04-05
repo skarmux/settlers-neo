@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://uycve418t536"]
+
+[ext_resource type="Script" path="res://scripts/settler.gd" id="1_684j8"]
+[ext_resource type="Shader" uid="uid://b42moaskpupch" path="res://shaders/settler.tres" id="1_kjoql"]
+
+[sub_resource type="VisualShader" id="VisualShader_nwq34"]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+
+
+"
+graph_offset = Vector2(-43, 86)
+mode = 1
+flags/light_only = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pja48"]
+shader = SubResource("VisualShader_nwq34")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ecc15"]
+shader = ExtResource("1_kjoql")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gu76d"]
+size = Vector2(20, 32)
+
+[node name="Sprite2D" type="Node2D"]
+material = SubResource("ShaderMaterial_pja48")
+script = ExtResource("1_684j8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ecc15")
+position = Vector2(0, -16)
+texture = SubResource("PlaceholderTexture2D_gu76d")
