@@ -23,7 +23,7 @@ shader = ExtResource("1_kjoql")
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gu76d"]
 size = Vector2(20, 32)
 
-[node name="Sprite2D" type="Node2D"]
+[node name="Settler" type="Node2D"]
 material = SubResource("ShaderMaterial_pja48")
 script = ExtResource("1_684j8")
 
