@@ -3,10 +3,10 @@ extends Node2D
 
 const SPEED = 20.0
 
-var global_target_position
+var global_target_position:Vector2
 
 func _ready():
-	pass
+	global_target_position = global_position
 
 func _process(delta: float):
 	global_position = global_position.move_toward(global_target_position, delta * SPEED)
